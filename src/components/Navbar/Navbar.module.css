@@ -7,3 +7,8 @@
     color: white;
     
 }
+
+.item.active {
+    color: goldenrod;
+    font-weight: 600;
+}
