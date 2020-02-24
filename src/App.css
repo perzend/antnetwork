@@ -13,27 +13,4 @@
     "n c";
 }
 
-.header {
-    grid-area: h;
-    background-color: teal;
-}
 
-.header img {
-    height: 60px;
-
-}
-
-.nav {
-    grid-area: n;
-    background-color: teal;
-}
-
-.content {
-    grid-area: c;
-    background-color: wheat;
-}
-
-.content img {
-    width: 100%;
-    height: 200px;
-}
