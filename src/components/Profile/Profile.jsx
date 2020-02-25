@@ -4,8 +4,8 @@ import MyPosts from './MyPosts/MyPosts';
 
 const Profile = () => {
   return (
-    <div className={s.content}>
-      <div>
+    <div>
+      <div className={s.topImage}>
         <img src='https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt='Not found' />
       </div>
       <div>
