@@ -20,21 +20,34 @@ const Message = (props) => {
 }
 
 const Dialogs = (props) => {
+    let dialogs = [
+        {id: '1', name: 'BigAnt'},
+        {id: '2', name: 'RedAnt'},
+        {id: '3', name: 'Queen'},
+        {id: '4', name: 'Vasya'},
+        {id: '5', name: 'Petya'},
+        {id: '6', name: 'Demo'},
+        {id: '7', name: 'BlackAnt'}
+    ]
+
+    let messages= [
+        {id: '1', message: 'Hi Guys! WTF'},
+        {id: '2', message: 'Iam Queen'},
+        {id: '3', message: 'Relax. Take it easy'},
+    ]
+
+    //Create JSX with .map. Long record: = dialogs.map ( (d) => { ... } );
+    let dialogsElements = dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
+
+    let messagesElements = messages.map(m => <Message message={m.message}/>);
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name='BigAnt' id='1'/>
-                <DialogItem name='RedAnt' id='2'/>
-                <DialogItem name='BlackAnt' id='3'/>
-                <DialogItem name='Queen' id='4'/>
-                <DialogItem name='Vasya' id='5'/>
-                <DialogItem name='Petya' id='6'/>
-                <DialogItem name='Demo' id='7'/>
+                {dialogsElements}
             </div>
             <div className={s.messages}>
-                <Message message='Hi Guys! WTF'/>
-                <Message message='Iam Queen'/>
-                <Message message='Relax. Take it easy'/>
+                {messagesElements}
             </div>
         </div>
     )
