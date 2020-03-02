@@ -2,6 +2,19 @@
     padding: 10px;
 }
 
+.title {
+    text-align: center;
+}
+
 .posts {
     margin-top: 10px;
+    border-top: 2px dotted black;
+}
+
+.ava {
+    padding: 10px;
+    border-radius: 20px;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
 }

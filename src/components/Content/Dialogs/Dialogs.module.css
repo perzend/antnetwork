@@ -1,6 +1,5 @@
 .dialogs {
     display: grid;
-
     grid-template-columns: 2fr 10fr;
 }
 
@@ -13,14 +12,39 @@
 }
 
 .dialog {
-
+    display: inline-block;
+    text-align: center;
 }
 
-.messages {
+.avatarsImage {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+.auMessage {
+    margin-top: 5px;
+    margin-left: 10px;
     padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: lightgrey;
+    color: darkblue;
+    width: max-content;
+    margin-right: auto;
 }
 
-.messages .message {
+.suMessage {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: lightgreen;
+    color: darkblue;
+    width: max-content;
 
 }
-

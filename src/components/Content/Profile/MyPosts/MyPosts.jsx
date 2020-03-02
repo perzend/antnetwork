@@ -5,18 +5,20 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-    let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>);
+    let postsElements = props.posts.posts.map(p => (
+        <Post avatar={props.avatar} name={props.name} text={p.pText} count={p.lCount}/>));
 
     return (
         <div className={s.postsBlock}>
-            <h3>My posts</h3>
+            <h2 className={s.title}>My posts</h2>
             <div>
                 <textarea></textarea>
+                <br/>
                 <button>Add new post</button>
-                <button>Remove</button>
+                <button>Clear</button>
             </div>
             <div className={s.posts}>
-               {postsElements}
+                {postsElements}
             </div>
         </div>
     )

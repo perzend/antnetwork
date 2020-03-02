@@ -12,3 +12,15 @@
 .item a.activeLink {
     color: goldenrod;
 }
+
+
+.item.friendsBlock {
+    margin-top: 50px;
+
+}
+.item.friendsBlock span {
+    color: white;
+    font-size: 30px;
+
+
+}

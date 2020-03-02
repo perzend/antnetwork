@@ -2,14 +2,17 @@ import React from 'react';
 import s from './Post.module.css';
 
 const Post = (props) => {
-  return (
-    <div className={s.item}>
-      <img src='https://i.pinimg.com/originals/cf/5e/de/cf5ede1acb4292683c74f6c4dade334f.jpg' />
-      {props.message}
-      <div>
-        <span>How many likes: {props.likesCount}</span>
-      </div>
-    </div>
-  );
+    return (
+        <div className={s.item}>
+            <img className={s.ava} src={props.avatar.pathToSelfUserAvatar}/>
+            <span>{props.name.suName}</span>
+            <div>
+                <p>{props.text}</p>
+            </div>
+            <div>
+                <span>How many likes: {props.count}</span>
+            </div>
+        </div>
+    )
 }
 export default Post;
