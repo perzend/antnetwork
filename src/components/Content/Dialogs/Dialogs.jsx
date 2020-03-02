@@ -13,6 +13,14 @@ let messagesElements = props.state.dialogs.map(m => m.auMessages.map(mm => <Mess
 
     let suMessagesElements = props.state.selfUserMessages.map(msu => <Message id={msu.id} message = {msu.suMessage} flag = 'su'/>);
 
+
+    let newMessageText = React.createRef();
+
+   let sendMessage = () => {
+       let message = newMessageText.current.value;
+       alert(message);
+   }
+
 return (
     <div className={s.dialogs}>
         <div className={s.dialogsItems}>
@@ -21,6 +29,12 @@ return (
         <div>
             {messagesElements}
             {suMessagesElements}
+            <div>
+            <textarea ref={newMessageText} name="" id="" cols="30" rows="10">
+
+            </textarea><br/>
+                <button onClick = {sendMessage}>Send</button>
+            </div>
         </div>
     </div>
 )
